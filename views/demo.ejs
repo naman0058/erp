@@ -1,0 +1,99 @@
+<% include css.ejs %>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <div id="insertdiv">
+                    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+                    <div class="login-block">
+                        <h1>New Student</h1>
+                        <select id="departmentid" name="departmentid"></select>
+                        <br>
+                        <br>
+                        <input id="name" type="text" class="form-control" placeholder="Student Name">
+                        <input id="password" class="form-control" placeholder="Password">
+                        <button id='submit' class="btn btn-success" type="success">Submit</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+    <!--for edit-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <br>
+                <div id="editdiv">
+
+
+
+                    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+                    <div class="login-block">
+                        <h1>Student[update]</h1>
+                        <input id="pid" class="form-control" readonly="true">
+                        <select id="pdepartmentid" name="departmentid"></select>
+                        <br>
+                        <br>
+                        <input name="pname" type="text" class="form-control" placeholder="Student Name">
+                        <input name="pemail" type="text" class="form-control" placeholder="Email">
+                        <input name="prollnumber" type="text" class="form-control" placeholder="Roll Number">
+                        <input name="pnumber" type="text" class="form-control" placeholder="Mobile Number">
+                        <input name="pssc" type="text" class="form-control" placeholder="Enter SSC %">
+                        <input name="phsc" type="text" class="form-control" placeholder="Enter HSC %">
+                        <input name="plogo" type="file" class="form-control">
+                        <button class="btn btn-outline-primary" id="update">edit</button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+
+
+
+
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascripts/jquery.js"></script>
+
+    <script>
+        $('#submit').click(function () {
+            let insertobj = {
+                name: $('#name').val(),
+                password: $('#password').val()
+            }
+            console.log(insertobj)
+        })
+
+    </script>
+    </body>
+
+    </html>
